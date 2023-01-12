@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Technical Documentation -- HD Microservices</title>
+</head>
+<body>
+    <nav id="navbar">
+       <header>Microtask Technical Documentation</header>
+       <ul class="nav-list">
+         <li class="nav-list-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+         <li class="nav-list-item"><a class="nav-link" href="#WebApi">Know about Web API</a></li>
+         <li class="nav-list-item"><a class="nav-link" href="#Microservices">Know about Microservices</a></li>
+         <li class="nav-list-item"><a class="nav-link" href="#Task1">Micro-Task 1 :- Web API</a></li>
+         <li class="nav-list-item"><a class="nav-link" href="#Task2">Micro-Task 2 :- Microservices</a></li>
+         <li class="nav-list-item"><a class="nav-link" href="#Task3">Micro-Task 3 :- Reverse Geocoding</a></li>
+       </ul>
+     </nav>
+
+   <main id="main-doc">
+     <section class="main-section" id="Introduction">
+       <header>Introduction</header>
+       <p> This documentation provides a detailed overview of all the APIs and microtasks developed for Hostel Devta in the second level i.e the developmental stage</p>
+       
+     </section>
+
+     <section class="main-section" id="WebApi">
+       <header>Know About API</header>
+       <p>An Application Programming Interface (API) is a set of rules and protocols for building software and applications. The task of Web API include:-
+        <ul>
+            <li>Enhance the capabilities of web browsers</li>
+            <li>Provide a clear syntax for complex code</li>
+            <li>Make complex tasks easier</li>
+        </ul>
+        One specific type of web API, called a REST API, uses the HTTP protocol to make requests to and receive responses from a server. These requests and responses allow a client to retrieve or update information stored on the server. The term "REST" stands for Representational State Transfer, which is the architectural style used in designing these types of APIs.
+        </p>
+     </section>
+
+     <section class="main-section" id="Microservices">
+       <header>Know About Microservices</header>
+       <p>Microservices, also known as Microservices-based architecture, is a method of building applications that enables easy scaling and updating of individual parts of the application
+        as well as the use of different programming languages and teams
+        <ul>
+            <li>By breaking them down into small</li>
+            <li>By using Self-contained units that communicate with each other through APIs</li>
+        </ul>. Microservices-based architecture uses JSON payloads and HTTP-based RESTful techniques, and is well suited for mobile-first application development and integration into continuous DevOps processes. It is a way to design applications by using small, composable units that each run on a separate instance, and it replaces the need for heavy infrastructure.</p>
+
+       
+     </section>
+
+<!-- Microstask1 -->
+     <section class="main-section" id="Task1">
+       <header>Microtask 1 :- Web API</header>
+       <p>This is an simple API using ExpressJS to get the details of hostels using its ID</p>
+       <span>API is live at <a href="https://bxlfi9.deta.dev/">https://bxlfi9.deta.dev/</a></span>
+       <h3>Installation</h3>
+       <ul>
+        <li>
+            Clone the git repository <a href="https://github.com/abhi78nath/HD.git">https://github.com/abhi78nath/HD.git</a>
+        </li>
+        <li>
+            cd HD
+        </li>
+        <li>
+            npm i
+        </li>
+        <li>
+            nodemon start
+        </li>
+       </ul>
+
+       <h3>API Endpoints</h3>
+       <p>Make a <span style="font-weight:bold; color:#32C764">GET</span>  request</p>
+       <div class="code">
+        <code>/api/hostels</code><br>
+        <code>/api/hostels/{any id}</code> 
+       </div> 
+       
+       <p>Make a <span style="font-weight:bold; color:#32C764">POST</span> request</p>
+       <p>Adding new hostel :- Put the name of hostel and location in json format</p>
+       <div class="code">
+        <code>/api/hostels</code>
+       </div>
+     </section>
+
+ 
+     <!-- Microtask 2 -->
+    <section class="main-section" id="Task2">
+       <header>Microtask 2 :- Microservices</header>
+       <p>This task consists of a microservice where a user can perform three tasks:-
+        <ul>
+            <li>Error Handling (to handles server status)</li>
+            <li>Visitor counter(count the visitors</li>
+            <li>Authentication (login/signup)</li>
+        </ul>
+        <span>API is live at <a href="https://bljm6z.deta.dev/">https://bljm6z.deta.dev/</a><span>
+       </p>
+
+       <h3>Installation</h3>
+       <ul>
+        <li>
+            Clone the git repository <a href="https://github.com/abhi78nath/microtask-2-.git">https://github.com/abhi78nath/microtask-2-.git</a>
+        </li>
+        <li>
+            cd microtask-2-
+        </li>
+        <li>
+            npm i
+        </li>
+        <li>
+            nodemon start
+        </li>
+       </ul>
+
+       <h3>API Endpoints</h3>
+       <p>User may use any API testing application like Postman or ThunderClient to hit the endpoints</p>
+       <ul>
+        <li>To get the Visitor count</li>
+        <p>In API testing application you have to make a <span style="font-weight:bold; color:#32C764">GET</span> request </p>
+        <div class="code">
+            <code>https://bljm6z.deta.dev/viscounter</code>
+        </div>
+        
+
+       <li>Authentication (use api tester to hit endpoint)</li>
+        <ul>
+
+            <li>SignUp (Use <span style="font-weight:bold; color:#32C764">POST</span> request)</li>
+            <p>Enter name, email , password in json format to signup</p>
+            <p>Endpoint</p>
+            <div class="code">
+                <code>/auth/signup</code>
+            </div>
+
+
+            <li>Login (Use <span style="font-weight:bold; color:#32C764">POST</span> request)</li>
+            <p>Enter the email and password for login</p>
+            <p>Endpoint</p>
+            <div class="code">
+                <code>/auth/login</code>
+            </div>
+
+            <li>Get the logged in user (USE <span style="font-weight:bold; color:#32C764">POST</span> REQUEST)</li>
+            <!-- <p>/auth/getuser</p> -->
+            <p>Enter the auth-token in the header</p>
+            <p>Endpoint</p>
+            <div class="code">
+                <code>/auth/getuser</code>
+            </div>
+        </ul>
+       </ul>
+
+      
+     </section>
+
+ <!-- Microtask 3 -->
+     <section class="main-section" id="Task3">
+        <header>Microtask 3 :- Reverse Geocoding Microservice</header>
+        <p>In this microservice , user can obtain the address of a certain place when given input of latitude and longitude of that place.</p>
+        <span>API is live at <a href="https://5rd2rl.deta.dev/">https://5rd2rl.deta.dev/</a></span>
+        <h3>Installation</h3>
+        <ul>
+         <li>
+             Clone the git repository <a href="https://github.com/abhi78nath/Microtask3-Reverse-Geocoding-.gitt">https://github.com/abhi78nath/Microtask3-Reverse-Geocoding-.git</a>
+         </li>
+         <li>
+             cd Microtask3-Reverse-Geocoding-
+         </li>
+         <li>
+             npm i
+         </li>
+         <li>
+             nodemon start
+         </li>
+        </ul>
+
+        <h3>API ENDPOINTS</h3>
+        <div class="code">
+            <code>/address?lat={latitude}&lon={longitude}</code>
+        </div>
+        
+     </section>
+ 
+   <footer>Created by Abhishek Nath &copy; 2023</footer>
+   </main>
+ </body>
+</html>
